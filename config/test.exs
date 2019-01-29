@@ -11,8 +11,8 @@ config :logger, level: :warn
 
 # Configure your database
 config :plate_slate, PlateSlate.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "plate_slate_test",
+  username: "elixir",
+  password: "kyks_dev",
+  database: "plate_slate_dev",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
