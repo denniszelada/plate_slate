@@ -4,7 +4,9 @@ defmodule PlateSlateWeb.Schema do
 
   query do
     field :menu_items, list_of(:menu_item) do
-      resolve fn _, _, _ -> {:ok, Repo.all(Menu.Item)}
+      resolve fn _, _, _ ->
+        {:ok, Repo.all(Menu.Item)}
+      end
     end
   end
 
