@@ -15,5 +15,6 @@ defmodule PlateSlateWeb.Schema do
     field :id, :id
     field :name, :string
     field :description, :string
+    field :price, :float 
   end
 end
