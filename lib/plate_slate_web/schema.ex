@@ -1,6 +1,7 @@
 defmodule PlateSlateWeb.Schema do
   use Absinthe.Schema
-  alias PlateSlate.{Menu, Repo}
+
+  alias PlateSlateWeb.Resolvers
 
   query do
     @desc "The list of available items on the menu"
