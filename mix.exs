@@ -26,7 +26,7 @@ defmodule PlateSlate.MixProject do
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "dev/support", "test/support"]
-  defp elixirc_paths(_), do: ["lib"]
+  defp elixirc_paths(_), do: ["lib", "dev/support"]
 
   # Specifies your project dependencies.
   #

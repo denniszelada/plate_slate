@@ -1,7 +1,7 @@
 defmodule PlateSlateWeb.Schema.Query.MenuItemsTest do
   use PlateSlateWeb.ConnCase, async: true
 
-  setup do 
+  setup do
     PlateSlate.Seeds.run()
   end
 
@@ -48,5 +48,21 @@ defmodule PlateSlateWeb.Schema.Query.MenuItemsTest do
           ]
         }
       }
+  end
+
+  @query """
+  {
+    menuItems(matching: 123) {
+      name
+    }
+  }
+  """
+
+  test "menuItems field returns errors when using a bad value" do
+    response = get(build_conn(), "/api", query: @query)
+    assert %{"errors" => [
+      %{"message" => message}
+    ]} = json_response(response, 400)
+    assert message == "Argument \"matching\" has invalid value 123."
   end
 end
