@@ -13,6 +13,6 @@ config :logger, level: :warn
 config :plate_slate, PlateSlate.Repo,
   username: "elixir",
   password: "kyks_dev",
-  database: "plate_slate_dev",
+  database: "plate_slate_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
